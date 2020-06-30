@@ -33,6 +33,19 @@
     - Creator 패턴
         - B가 A를 포함하거나 의존할 경우
         - B가 A를 기록할 경우
+            - 여기서 기록이란것 무엇일까? (개인적인 궁금증)
+            - 연관관계에 있고 객체를 사용하여 저장 및 사용 하는 경우가 아닐까 싶다.
+            ```java
+            class Phone {
+                List<Picture> gallery;
+          
+                Picture takePicture() {
+                    final Picture picture = new Picture();
+                    gallery.add(picture);
+                    return picture;
+                }
+            }
+            ```
         - B가 A를 사용할 경우
         - B가 A를 생성하는데 필요한 정보를 알고있는 경우
      - 생성되는 객체와 연결되거나 관련될 필요가 있는 객체에게 생성 책임을 맡긴다.
