@@ -15,6 +15,7 @@ public class Lecture {
     }
 
     public double average() {
+        System.out.print("parent : ");
         return scores.stream()
                      .mapToInt(Integer::intValue)
                      .average()
@@ -31,7 +32,7 @@ public class Lecture {
 
     public String evaluate() {
         final int passCount = (int) passCount();
-        return String.format("Pass : %d , Fail : %d", passCount, failCount(passCount));
+        return String.format("parent Pass : %d , Fail : %d", passCount, failCount(passCount));
     }
 
     private long passCount() {
