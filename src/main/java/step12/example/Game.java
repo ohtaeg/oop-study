@@ -14,9 +14,7 @@ interface SmartPhone{
 }
 
 class IPhone implements SmartPhone{
-
 }
 
 class Galaxy implements SmartPhone{
-
 }

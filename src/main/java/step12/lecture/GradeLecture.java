@@ -24,15 +24,15 @@ public class GradeLecture extends Lecture {
                      .orElse(0d);
     }
 
-    @Override
-    public String getEvaluationMethod() {
-        return "Grade";
-    }
-
     // 오버라이드
     @Override
     public String evaluate() {
         return super.evaluate() + " @ " + gradeStatistics();
+    }
+
+    @Override
+    public String getEvaluationMethod() {
+        return "Grade";
     }
 
     private String gradeStatistics() {
